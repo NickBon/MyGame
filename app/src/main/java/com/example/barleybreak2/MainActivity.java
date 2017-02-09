@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fillTheButtons(width, height);
-        Log.i(TAG, "2.........."+Arrays.deepToString(counts));
+        Log.i(TAG, "  "+Arrays.deepToString(counts));
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                 counts[i][j] = random();
             }
         }
-        Log.i(TAG, "1.........."+Arrays.deepToString(counts));
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 checkwidth(i, j);
